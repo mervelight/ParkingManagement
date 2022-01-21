@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="/validate.js"></script>
+<title>Edit Student Record</title>
+</head>
+<body>
+<div th:replace="/header :: header"> </div><br />
+	<div align="center" class="container-fluid">
+		<h4>Edit Car Record</h4>
+		<br />
+		<form action="#" th:action="@{/update}" th:object="${car}" onsubmit="return validateForm()" method="post" name="registration" id="registration">
+		<table border="1" cellpadding="7" class="table-bordered table-striped table-hover">
+		<style type="text/css">#tblHeaders {background-color:#00234c; color:white;}</style>
+		<tr>
+			<td id="tblHeaders">Id: </td>
+			<td><input type="text" th:field="*{id}" readonly="readonly" title="Id is Read Only"></td>
+		</tr>
+		<tr>
+			<td id="tblHeaders">First Name: </td>
+			<td><input type="text" th:field="*{firstname}" name="firstname" id="firstname"></td>
+		</tr>
+		<tr>
+			<td id="tblHeaders">Last Name: </td>
+			<td><input type="text" th:field="*{lastname}" name="lastname" id="lastname"></td>
+		</tr>
+		<tr>
+			<td id="tblHeaders">Car Make: </td>
+			<td><input type="text" th:field="*{make}" name="make" id="make"></td>
+		</tr>
+		<tr>
+			<td id="tblHeaders">Model: </td>
+			<td><input type="text" th:field="*{model}" name="model" id="model"></td>
+		</tr>
+		<tr>
+			<td id="tblHeaders">Color: </td>
+			<td><input type="text" th:field="*{color}" name="color" id="color"></td>
+		</tr>
+		<tr>
+			<td id="tblHeaders">Plate Number: </td>
+			<td><input type="text" th:field="*{platenumber}" name="platenumber" id="platenumber"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button type="submit">update</button></td>
+		</tr>
+		</table>
+		</form>
+	</div>
+	<br />
+	<div th:replace="/footer :: footer"> </div>
+ <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	
+	
+</body>
+</html>
